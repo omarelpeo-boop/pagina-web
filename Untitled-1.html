@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>H.y.E - Sport & Events | Virgen de Cocharcas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .hero-bg {
+      background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), 
+                        url('https://images.unsplash.com/photo-1585208798174-6cedd78a9f9f?q=80&w=2400&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .card-hover { 
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
+    }
+    .card-hover:hover { 
+      transform: translateY(-15px); 
+      box-shadow: 0 25px 30px -10px rgb(0 0 0 / 0.6);
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 w-full z-50 backdrop-blur-xl bg-black/80 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <div>
+        <h1 class="text-4xl font-black tracking-tighter">
+          H<span class="text-emerald-400">.</span>y<span class="text-amber-400">.</span>E
+        </h1>
+        <p class="text-xs text-emerald-400 tracking-[2px] -mt-1">VIRGEN DE COCHARCAS</p>
+      </div>
+      
+      <div class="hidden md:flex gap-10 text-sm uppercase tracking-widest font-medium">
+        <a href="#inicio" class="hover:text-emerald-400 transition">Inicio</a>
+        <a href="#experiencias" class="hover:text-emerald-400 transition">Experiencias</a>
+        <a href="#galeria" class="hover:text-emerald-400 transition">Galería</a>
+        <a href="#reservas" class="hover:text-emerald-400 transition">Reservas</a>
+      </div>
+
+      <button onclick="toggleMenu()" class="md:hidden text-3xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero-bg h-screen flex items-center justify-center">
+    <div class="text-center px-6 max-w-5xl mx-auto">
+      <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3 rounded-full text-sm tracking-widest mb-8">
+        <span class="text-emerald-400">●</span> CANCHA • EVENTOS • LOUNGE
+      </div>
+      
+      <h1 class="text-7xl md:text-8xl font-black leading-none tracking-tighter mb-4">H.y.E</h1>
+      <p class="text-emerald-400 text-lg tracking-widest mb-6">VIRGEN DE COCHARCAS</p>
+      
+      <h2 class="text-4xl md:text-6xl font-bold leading-tight mb-8">
+        El mejor lugar para<br>
+        <span class="bg-gradient-to-r from-emerald-400 to-amber-400 bg-clip-text text-transparent">jugar y celebrar</span>
+      </h2>
+
+      <div class="mt-12 flex flex-col sm:flex-row gap-5 justify-center">
+        <a href="#reservas" class="bg-emerald-500 hover:bg-emerald-400 text-black font-bold px-12 py-6 rounded-3xl text-lg inline-flex items-center justify-center gap-3 transition">
+          <i class="fas fa-calendar"></i> Reservar Ahora
+        </a>
+        <a href="#galeria" class="border border-white/40 hover:bg-white/10 px-10 py-6 rounded-3xl text-lg font-medium transition">
+          Ver Galería
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIAS -->
+  <section id="experiencias" class="py-28 px-6 bg-gradient-to-b from-black to-zinc-950">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-emerald-400 uppercase tracking-widest text-sm">NUESTRAS EXPERIENCIAS</p>
+        <h2 class="text-5xl md:text-6xl font-black mt-3">Elige tu momento</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="card-hover bg-zinc-900 border border-white/10 rounded-3xl overflow-hidden">
+          <img src="https://elcomercio.pe/resizer/7BiyEex9_MOGv39pR27MR-pdSKw=/1200x1200/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/PQFWQJN6BVEGXFK2RCMOYPSQXQ.jpg" class="w-full h-72 object-cover" alt="Eventos">
+          <div class="p-8">
+            <h3 class="text-3xl font-bold mb-3">Eventos Premium</h3>
+            <p class="text-gray-400">Cumpleaños, compromisos, aniversarios y fiestas privadas.</p>
+          </div>
+        </div>
+
+        <div class="card-hover bg-zinc-900 border border-white/10 rounded-3xl overflow-hidden">
+          <img src="https://www.shutterstock.com/image-photo/holborn-london-uk-july-17-600nw-2699188429.jpg" class="w-full h-72 object-cover" alt="Cancha">
+          <div class="p-8">
+            <h3 class="text-3xl font-bold mb-3">Zona Deportiva</h3>
+            <p class="text-gray-400">Canchas de grass sintético profesional con iluminación nocturna.</p>
+          </div>
+        </div>
+
+        <div class="card-hover bg-zinc-900 border border-white/10 rounded-3xl overflow-hidden">
+          <img src="https://www.shutterstock.com/image-vector/bar-table-pub-interior-cartoon-260nw-2465483109.jpg" class="w-full h-72 object-cover" alt="Bar">
+          <div class="p-8">
+            <h3 class="text-3xl font-bold mb-3">Bar & Lounge</h3>
+            <p class="text-gray-400">Zona moderna con bar, parrillas y ambiente premium.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section id="galeria" class="py-28 px-6 bg-black">
+    <div class="max-w-7xl mx-auto text-center mb-16">
+      <p class="text-emerald-400 uppercase tracking-widest">MOMENTOS REALES</p>
+      <h2 class="text-5xl md:text-6xl font-black mt-3">Vive H.y.E</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLWsbYcIopOuSXsqqaH7tIvNDA8cPTgCrxDA&s" class="rounded-3xl hover:scale-105 transition duration-300" alt="Cancha">
+      <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=800&auto=format&fit=crop" class="rounded-3xl hover:scale-105 transition duration-300" alt="Evento">
+      <img src="https://www.shutterstock.com/image-photo/holborn-london-uk-july-17-600nw-2699188429.jpg" class="rounded-3xl hover:scale-105 transition duration-300" alt="Bar">
+      <img src="https://images.unsplash.com/photo-1575361204480-aadea25e6e68?q=80&w=800&auto=format&fit=crop" class="rounded-3xl hover:scale-105 transition duration-300" alt="">
+      <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=800&auto=format&fit=crop" class="rounded-3xl hover:scale-105 transition duration-300" alt="">
+      <img src="https://images.unsplash.com/photo-1511886929837-354d827aae26?q=80&w=800&auto=format&fit=crop" class="rounded-3xl hover:scale-105 transition duration-300" alt="">
+    </div>
+  </section>
+
+  <!-- RESERVAS -->
+  <section id="reservas" class="py-28 px-6 bg-zinc-950">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+      <div class="bg-zinc-900 border border-emerald-500/30 rounded-3xl p-10">
+        <p class="text-emerald-400 uppercase tracking-widest mb-2">RESERVA RÁPIDA</p>
+        <h2 class="text-5xl font-black">¿Cuándo vienes?</h2>
+
+        <form id="reservaForm" class="mt-10 space-y-6">
+          <input type="text" placeholder="Nombre completo" class="w-full bg-black border border-zinc-700 rounded-2xl px-6 py-5" required>
+          <input type="tel" placeholder="Número de WhatsApp" class="w-full bg-black border border-zinc-700 rounded-2xl px-6 py-5" required>
+          <select class="w-full bg-black border border-zinc-700 rounded-2xl px-6 py-5">
+            <option>Fulbito</option>
+            <option>Vóley</option>
+            <option>Cumpleaños</option>
+            <option>Compromiso</option>
+            <option>Fiesta Privada</option>
+          </select>
+          <input type="date" class="w-full bg-black border border-zinc-700 rounded-2xl px-6 py-5" required>
+          
+          <button type="submit" class="w-full bg-gradient-to-r from-emerald-500 to-amber-500 text-black font-bold py-6 rounded-3xl text-lg">
+            Enviar por WhatsApp
+          </button>
+        </form>
+      </div>
+
+      <div class="flex flex-col justify-center">
+        <h3 class="text-4xl font-bold mb-8">Métodos de pago</h3>
+        <div class="space-y-6">
+          <div class="bg-black border border-emerald-500/30 rounded-3xl p-8">
+            <p class="text-3xl font-bold text-emerald-400">Yape</p>
+            <p class="text-4xl font-black mt-2">916 102 995</p>
+          </div>
+          <div class="bg-black border border-amber-500/30 rounded-3xl p-8">
+            <p class="text-3xl font-bold text-amber-400">WhatsApp</p>
+            <p class="text-4xl font-black mt-2">+51 916 102 995</p>
+          </div>
+        </div>
+
+        <div class="mt-10">
+          <p class="text-emerald-400 uppercase tracking-widest mb-3">UBICACIÓN</p>
+          <a href="https://maps.google.com/?q=-11.31663,-74.53533" target="_blank" 
+             class="text-gray-300 hover:text-white flex items-center gap-2">
+            <i class="fas fa-map-marker-alt"></i> Ver en Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/51916102995" target="_blank"
+     class="fixed bottom-8 right-8 bg-green-500 text-black p-5 rounded-full shadow-2xl hover:scale-110 transition text-3xl z-50">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script>
+    document.getElementById('reservaForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nombre = this.elements[0].value || "Sin nombre";
+      const telefono = this.elements[1].value || "";
+      const evento = this.elements[2].value || "";
+      const fecha = this.elements[3].value || "";
+
+      const mensaje = `Hola, quiero reservar en H.y.E.%0A%0A👤 Nombre: ${nombre}%0A📞 Teléfono: ${telefono}%0A🎉 Evento: ${evento}%0A📅 Fecha: ${fecha}`;
+      window.open(`https://wa.me/51916102995?text=${mensaje}`, '_blank');
+    });
+
+    function toggleMenu() {
+      alert("Menú móvil próximamente");
+    }
+  </script>
+</body>
+</html>
